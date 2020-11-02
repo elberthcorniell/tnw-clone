@@ -1,0 +1,133 @@
+* {
+    transition-duration: 0.3s;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: white;
+}
+
+a {
+    color: inherit;
+    text-decoration: inherit;
+}
+
+nav {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    display: inline;
+}
+
+nav ul li {
+    display: inline;
+    padding: 0 5px;
+}
+
+nav div:first-child {
+    display: flex;
+    justify-content: space-between;
+    background-color: #131313;
+    height: 30px;
+    align-items: center;
+    font-size: 13px;
+    font-weight: 500;
+    color: #555;
+}
+
+nav div:last-child {
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    height: 48px;
+    align-items: center;
+    font-size: 14px;
+    font-weight: 500;
+    color: #aaa;
+    text-transform: uppercase;
+    padding: 0 0 0 10px;
+    overflow: hidden;
+}
+
+nav i {
+    width: 46px;
+    height: 100%;
+    border-left: 1px solid rgba(0, 0, 0, 0.1);
+    font-size: 18px;
+    display: flex;
+    text-align: center;
+    padding-top: 32px;
+    background-color: transparent;
+}
+
+nav i:hover {
+  background-color: #f3f5f7;
+}
+
+.recent-articles {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 34.67vw;
+  column-gap: 10px;
+  padding: 10px;
+  color: white;
+}
+
+.recent-articles > a:first-child {
+  Background-image: url("https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2020/10/video-conference-5162927_1920-796x531.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.recent-articles-2 {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-row: 1fr 1fr;
+  row-gap: 10px;
+}
+
+.recent-articles-2 > a:first-child {
+  background-image: url("https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2020/10/tnw2020-feature_img-02.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.recent-articles-2 > a:last-child {
+  background-image: url("https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2020/08/global-ev-sales-2040-future-car-wood-mackenzie-analysis-market-796x448.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.recent-articles div {
+  width: 100%;
+  height: 100%;
+}
+
+.recent-articles a {
+  position: relative;
+}
+
+.recent-articles article {
+  padding: 20px;
+  position: absolute;
+  bottom: 0;
+  height: fit-content;
+  background-image: linear-gradient(to bottom, rgba(255,0,0,0), black);
+}
+
+.recent-articles h1 {
+  color: inherit;
+  font-size: 56px;
+  line-height: 60px;
+  margin: 0;
+  font-weight: bold;
+}
+
+.recent-articles-2 h1 {
+    font-size: 28px;
+    line-height: 30px;
+}
