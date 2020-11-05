@@ -33,7 +33,7 @@ nav ul li {
     padding: 0 5px;
 }
 
-nav div:first-child {
+nav > div:first-child {
     display: flex;
     justify-content: space-between;
     background-color: #131313;
@@ -44,29 +44,31 @@ nav div:first-child {
     color: #555;
 }
 
-nav div:last-child {
-    display: flex;
-    justify-content: space-between;
-    background-color: white;
-    height: 48px;
-    align-items: center;
-    font-size: 14px;
-    font-weight: 500;
-    color: #aaa;
-    text-transform: uppercase;
-    padding: 0 0 0 10px;
-    overflow: hidden;
+nav > div:last-child {
+  position: fixed;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+  height: 48px;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 500;
+  color: #aaa;
+  text-transform: uppercase;
+  padding: 0 0 0 10px;
+  overflow: hidden;
 }
 
 nav i {
-    width: 46px;
-    height: 100%;
-    border-left: 1px solid rgba(0, 0, 0, 0.1);
-    font-size: 18px;
-    display: flex;
-    text-align: center;
-    padding-top: 32px;
-    background-color: transparent;
+  width: 46px;
+  height: 100%;
+  border-left: 1px solid rgba(0, 0, 0, 0.1);
+  font-size: 18px;
+  display: flex;
+  text-align: center;
+  padding-top: 32px;
+  background-color: transparent;
 }
 
 nav i:hover {
@@ -292,5 +294,56 @@ nav i:hover {
   column-gap: 40px;
   row-gap: 40px;
   padding: 10px;
-  color: white;
+  max-width: 100vw;
+  overflow: hidden;
+}
+
+.lastest-deals img {
+  width: 100%;
+}
+
+.lastest-deals > div {
+  position: relative;
+  overflow: hidden;
+}
+
+.lastest-deals > div > span {
+  background-color: yellow;
+  color: #131313;
+  font-weight: bold;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 50px;
+  padding-bottom: 0;
+  margin-top: -20px;
+  margin-right: -70px;
+  transform: rotate(45deg);
+  text-transform: uppercase;
+}
+
+.lastest-deals h1 {
+  font-size: 18px;
+}
+
+.lastest-deals p {
+  font-weight: bold;
+  color: #131313;
+}
+
+.lastest-deals p > span {
+  color: #555;
+  font-weight: 300;
+  font-size: 14px;
+  text-decoration: line-through;
+}
+
+.social-media {
+  background-color: #131313;
+  padding: 35px 0;
+}
+
+.copyright {
+  background-color: black;
+  padding: 35px 0;
 }
