@@ -13,6 +13,11 @@ a {
     text-decoration: inherit;
 }
 
+article {
+    width: 100%;
+    height: 100%;
+}
+
 nav {
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
@@ -77,57 +82,215 @@ nav i:hover {
   color: white;
 }
 
-.recent-articles > a:first-child {
-  Background-image: url("https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2020/10/video-conference-5162927_1920-796x531.jpg");
+.recent-articles > div:first-child {
+  background-image: url("https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2020/10/video-conference-5162927_1920-796x531.jpg");
   background-size: cover;
   background-repeat: no-repeat;
+  position: relative;
+  overflow: hidden;
 }
 
-.recent-articles-2 {
+.recent-articles > div:first-child > div {
+  position: absolute;
+  bottom: 0;
+  padding: 20px;
+  background-image: linear-gradient(to bottom, rgba(0,0,0,0), black);
+  width: 100%;
+}
+
+.recent-articles > div:last-child {
   display: grid;
   grid-template-columns: 1fr;
-  grid-row: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
   row-gap: 10px;
 }
 
-.recent-articles-2 > a:first-child {
+.recent-articles > div:last-child > div:first-child {
   background-image: url("https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2020/10/tnw2020-feature_img-02.jpg");
   background-size: cover;
   background-repeat: no-repeat;
+  overflow: hidden;
 }
 
-.recent-articles-2 > a:last-child {
+.recent-articles > div:last-child > div:last-child {
   background-image: url("https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2020/08/global-ev-sales-2040-future-car-wood-mackenzie-analysis-market-796x448.jpg");
   background-size: cover;
   background-repeat: no-repeat;
+  overflow: hidden;
 }
 
-.recent-articles div {
-  width: 100%;
-  height: 100%;
-}
-
-.recent-articles a {
+.recent-articles > div:last-child > div {
   position: relative;
 }
 
-.recent-articles article {
-  padding: 20px;
+.recent-articles > div:last-child > div > div {
   position: absolute;
   bottom: 0;
-  height: fit-content;
-  background-image: linear-gradient(to bottom, rgba(255,0,0,0), black);
+  padding: 20px;
+  background-image: linear-gradient(to bottom, rgba(0,0,0,0), black);
+  width: 100%;
 }
 
 .recent-articles h1 {
-  color: inherit;
   font-size: 56px;
-  line-height: 60px;
+  line-height: 58px;
+  width: 90%;
   margin: 0;
+}
+
+.recent-articles > div:last-child h1 {
+  font-size: 28px;
+  line-height: 30px;
+  width: 90%;
+  margin: 0;
+}
+
+.lastest-news {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 220px;
+  column-gap: 20px;
+  row-gap: 20px;
+}
+
+.lastest-news img {
+  width: 100%;
+}
+
+.lastest-news strong {
+  font-size: 14px;
+}
+
+.lastest-news span {
+  font-size: 12px;
+  color: #aaa;
+}
+
+.title {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+}
+
+.title a {
+  padding: 0 10px;
+  border-right: 1px solid;
+}
+
+.title a:last-child {
+    border: none
+}
+
+.lastest-funding {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 220px;
+  column-gap: 20px;
+  row-gap: 20px;
+}
+  
+.lastest-funding img {
+  width: 60px;
+  height: 60px;
+  margin: 10px;
+  float: left;
+}
+  
+.lastest-funding h4 {
+  font-size: 14px;
+  background-color: #f42;
+  margin: 0;
+  padding: 10px 0;
+  color: white;
+}
+  
+.lastest-funding span {
+  font-size: 12px;
+  color: #aaa;
+}
+
+.lastest-funding > div > div > h4:last-child {
+  background-color: rgba(255,68,34,.08);
+  color: inherit;
+}
+
+.lastest-funding ul {
+  padding-bottom: 20px;
+}
+
+.lastest-funding p {
+  border-top: 1px solid rgba(255,68,34,.25);
+  padding: 20px 10px;
+}
+
+.categories {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 40px;
+  row-gap: 40px;
+  padding: 10px;
+  color: white;
+}
+
+.categories > div > div:nth-child(2) {
+  background-image: url("https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2020/10/tnw2020-feature_img-02.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  height: 15vw;
+  padding: 10px;
+  position: relative;
+}
+
+.categories > div > div:nth-child(3) {
+  background-color: #fff;
+  color: #f42;
+  height: 90px;
+  display: flex;
+}
+
+.categories > div > div:nth-child(3) p {
   font-weight: bold;
 }
 
-.recent-articles-2 h1 {
-    font-size: 28px;
-    line-height: 30px;
+.categories > div > div:first-child > div {
+  position: absolute;
+  bottom: 10px;
+}
+
+.categories h1 {
+  font-size: 28px;
+  line-height: 32px;
+  width: 90%;
+  margin: 0;
+}
+
+.categories a > img {
+  height: 90px
+}
+
+.categories > div > div:nth-child(3) a {
+  height: 90px;
+  width: 90px;
+  overflow: hidden;
+}
+
+.categories ul {
+  color: #555;
+  font-size: 14px;
+  padding: 20px;
+}
+
+.categories li {
+  padding: 10px 0;
+  border-top: 1px solid rgba(55, 55, 55, 0.2);
+}
+
+.lastest-deals {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  column-gap: 40px;
+  row-gap: 40px;
+  padding: 10px;
+  color: white;
 }
