@@ -20,10 +20,6 @@
     font-family: 'ARS Maquette Web One';
 }
 
-h1 {
-  font-family: 'Avalon Medium';
-}
-
 body {
     margin: 0;
     padding: 0;
@@ -186,7 +182,6 @@ nav i:hover {
 .latest-news {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 220px;
   column-gap: 20px;
   row-gap: 20px;
   width: calc(100% - 60px);
