@@ -189,7 +189,7 @@ nav i:hover {
   grid-template-rows: 220px;
   column-gap: 20px;
   row-gap: 20px;
-  width: calc(100vw - 60px);
+  width: calc(100% - 60px);
 }
 
 .latest-news img {
@@ -226,7 +226,7 @@ nav i:hover {
   grid-template-columns: 1fr 1fr 1fr 1fr;
   column-gap: 20px;
   row-gap: 20px;
-  width: calc(100vw - 60px);
+  width: calc(100% - 60px);
 }
   
 .latest-funding img {
@@ -352,7 +352,7 @@ nav i:hover {
   row-gap: 40px;
   padding: 10px;
   overflow: hidden;
-  width: calc(100vw - 60px);
+  width: calc(100% - 60px);
 }
 
 .latest-deals img {
@@ -526,7 +526,6 @@ nav i:hover {
   .latest-deals img {
     width: 75px;
     height: 75px;
-    margin-right: 10px;
   }
 
   .latest-deals {
@@ -534,8 +533,19 @@ nav i:hover {
     grid-template-rows: 75px;
   }
 
+  .latest-deals p {
+    display: block;
+    margin: 10px 0;
+  }
+
   .latest-deals > div {
-    display: flex;
+    display: grid;
+    grid-template-columns: 90px 1fr;
+    column-gap: 10px;
+  }
+
+  .latest-deals > div > span {
+    display: none;
   }
 
 }
