@@ -125,7 +125,7 @@ nav > div:last-child > i:last-child {
   color: white;
 }
 
-.recent-articles > div:first-child {
+.recent-articles > article:first-child {
   background-image: url("https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2020/10/video-conference-5162927_1920-796x531.jpg");
   background-size: cover;
   background-repeat: no-repeat;
@@ -133,7 +133,7 @@ nav > div:last-child > i:last-child {
   overflow: hidden;
 }
 
-.recent-articles > div:first-child > div:first-child {
+.recent-articles > article:first-child > div:first-child {
   position: absolute;
   bottom: 0;
   padding: 20px;
@@ -149,25 +149,25 @@ nav > div:last-child > i:last-child {
   row-gap: 10px;
 }
 
-.recent-articles > div:last-child > div:first-child {
+.recent-articles > div:last-child > article:first-child {
   background-image: url("https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2020/10/tnw2020-feature_img-02.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   overflow: hidden;
 }
 
-.recent-articles > div:last-child > div:last-child {
+.recent-articles > div:last-child > article:last-child {
   background-image: url("https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2020/08/global-ev-sales-2040-future-car-wood-mackenzie-analysis-market-796x448.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   overflow: hidden;
 }
 
-.recent-articles > div:last-child > div {
+.recent-articles > div:last-child > article {
   position: relative;
 }
 
-.recent-articles > div:last-child > div > div {
+.recent-articles > div:last-child > article > div {
   position: absolute;
   bottom: 0;
   padding: 20px;
