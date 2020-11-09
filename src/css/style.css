@@ -20,10 +20,6 @@
     font-family: 'ARS Maquette Web One';
 }
 
-h1 {
-  font-family: 'Avalon Medium';
-}
-
 body {
     margin: 0;
     padding: 0;
@@ -67,7 +63,7 @@ nav ul li, .usefull-links ul li {
 }
 
 .container {
-  width: 100vw;
+  width: calc(100vw - 60px);
   max-width: 1056px;
   padding: 20px;
   margin: auto;
@@ -96,18 +92,28 @@ nav {
 }
 
 nav i {
-  width: 46px;
-  height: 100%;
   border-left: 1px solid rgba(0, 0, 0, 0.1);
   font-size: 18px;
-  display: flex;
-  text-align: center;
-  padding-top: 32px;
+  padding: 40px auto;
   background-color: transparent;
+  padding: 15px;
+  cursor: pointer;
 }
 
 nav i:hover {
   background-color: #f3f5f7;
+}
+
+nav > div {
+  height: 100%;
+}
+
+nav > div:first-child {
+  display: none;
+}
+
+nav > div:last-child > i:last-child {
+  display: none;
 }
 
 .recent-articles {
@@ -119,7 +125,7 @@ nav i:hover {
   color: white;
 }
 
-.recent-articles > div:first-child {
+.recent-articles > article:first-child {
   background-image: url("https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2020/10/video-conference-5162927_1920-796x531.jpg");
   background-size: cover;
   background-repeat: no-repeat;
@@ -127,7 +133,7 @@ nav i:hover {
   overflow: hidden;
 }
 
-.recent-articles > div:first-child > div:first-child {
+.recent-articles > article:first-child > div:first-child {
   position: absolute;
   bottom: 0;
   padding: 20px;
@@ -143,25 +149,25 @@ nav i:hover {
   row-gap: 10px;
 }
 
-.recent-articles > div:last-child > div:first-child {
+.recent-articles > div:last-child > article:first-child {
   background-image: url("https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2020/10/tnw2020-feature_img-02.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   overflow: hidden;
 }
 
-.recent-articles > div:last-child > div:last-child {
+.recent-articles > div:last-child > article:last-child {
   background-image: url("https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2020/08/global-ev-sales-2040-future-car-wood-mackenzie-analysis-market-796x448.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   overflow: hidden;
 }
 
-.recent-articles > div:last-child > div {
+.recent-articles > div:last-child > article {
   position: relative;
 }
 
-.recent-articles > div:last-child > div > div {
+.recent-articles > div:last-child > article > div {
   position: absolute;
   bottom: 0;
   padding: 20px;
@@ -186,10 +192,9 @@ nav i:hover {
 .latest-news {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 220px;
   column-gap: 20px;
   row-gap: 20px;
-  width: calc(100vw - 60px);
+  width: 100%;
 }
 
 .latest-news img {
@@ -226,7 +231,7 @@ nav i:hover {
   grid-template-columns: 1fr 1fr 1fr 1fr;
   column-gap: 20px;
   row-gap: 20px;
-  width: calc(100vw - 60px);
+  width: 100%;
 }
   
 .latest-funding img {
@@ -352,7 +357,7 @@ nav i:hover {
   row-gap: 40px;
   padding: 10px;
   overflow: hidden;
-  width: calc(100vw - 60px);
+  width: 100%;
 }
 
 .latest-deals img {
@@ -452,9 +457,14 @@ nav i:hover {
   width: 50%;
 }
 
+.fa-bars {
+  color: #f42;
+}
+
 @media (max-width: 1024px) {
+
   .big-logo {
-    display: none;
+    background-image: none;
   }
 
   .latest-news {
@@ -485,6 +495,42 @@ nav i:hover {
 }
 
 @media (max-width: 768px) {
+  .big-logo {
+    display: none;
+  }
+
+  nav > div:last-child {
+    display: flex;
+    text-align: center;
+    align-items: center;
+  }
+
+  nav > div:first-child {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    height: 100%;
+    padding: 0 10px;
+    margin-left: -10px;
+  }
+
+  nav > div > img {
+    height: 33%;
+  }
+
+  nav > ul {
+    display: none;
+  }
+
+  .usefull-links {
+    display: none;
+  }
+
+  nav > div:last-child > i:last-child {
+    display: block;
+  }
+
   .recent-articles {
     grid-template-columns: 1fr;
     grid-template-rows: 200px 400px;
@@ -526,7 +572,6 @@ nav i:hover {
   .latest-deals img {
     width: 75px;
     height: 75px;
-    margin-right: 10px;
   }
 
   .latest-deals {
@@ -534,8 +579,19 @@ nav i:hover {
     grid-template-rows: 75px;
   }
 
+  .latest-deals p {
+    display: block;
+    margin: 10px 0;
+  }
+
   .latest-deals > div {
-    display: flex;
+    display: grid;
+    grid-template-columns: 90px 1fr;
+    column-gap: 10px;
+  }
+
+  .latest-deals > div > span {
+    display: none;
   }
 
 }
